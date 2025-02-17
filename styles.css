@@ -1,0 +1,90 @@
+.proposal-card {
+    text-align: center;
+    background: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+}
+
+h1 {
+    font-family: "Style Script", serif;
+    font-weight: 500;
+    font-size: 36px;
+    color: #C60726;
+    margin-bottom: -5px;
+}
+
+.img-container {
+    margin-bottom: 20px;
+}
+
+.yesbutton-link {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #F2BDC7;
+    background-color: #C60726;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.no-button {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: italic;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #C60726;
+    background-color: #F2BDC7;
+    text-align: center;
+    border-radius: 5px;
+    border-style: none;
+}
+
+.response-message {
+    text-align: center;
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-size: 20px;
+    margin-top: 30px;
+    color: #da137d;
+}
+
+footer {
+    color: #C60726;
+    text-align: center;
+    font-size: 12px;
+    font-family: "Merriweather", serif;
+    padding: 20px 30px;
+}
+
+a {
+    text-decoration: none;
+    color: #da137d;
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+}
