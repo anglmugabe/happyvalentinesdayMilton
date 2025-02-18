@@ -134,3 +134,119 @@ a {
         transform: scale(1);
     }
 }
+
+/* General page styling */
+.interactive-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Ensure it fills the screen */
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0;
+}
+
+/* Envelope container styling */
+.envelope-container {
+    position: relative;
+    width: 200px;
+    height: 140px;
+    cursor: pointer;
+    perspective: 1000px;
+    /* For 3D rotation effect */
+}
+
+/* Envelope styling */
+.envelope {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #e74c3c;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Top flap styles */
+.top-flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: #c0392b;
+    transform-origin: top;
+    transition: transform 0.5s ease-in-out;
+    clip-path: polygon(0 0, 50% 100%, 100% 0);
+    z-index: 2;
+}
+
+/* Envelope body */
+.envelope-body {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #e74c3c;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+/* Letter styling (hidden initially) */
+.letter {
+    position: absolute;
+    width: 180%;
+    /* Make it larger than the envelope */
+    height: 160%;
+    /* Make it larger than the envelope */
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-family: sans-serif;
+    transform: translateY(100%);
+    /* Start off-screen */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease;
+    opacity: 0;
+    /* Letter starts hidden */
+    z-index: 1;
+}
+
+/* Open envelope animation */
+.envelope.open .top-flap {
+    transform: rotateX(180deg);
+    /* Flap opens */
+}
+
+.envelope.open .letter {
+
+
+    opacity: 1;
+    /* Make the letter visible */
+    /* You can scale it up if you want it to look larger */
+    transform: translateY(-30%) scale(1.2);
+    /* Letter grows */
+}
+
+
+@media (max-width: 600px) {
+    .countdown {
+        font-size: 48px;
+    }
+
+    .envelope-container {
+        width: 160px;
+        height: 110px;
+    }
+
+    .letter {
+        width: 150%;
+        height: 150%;
+    }
+}

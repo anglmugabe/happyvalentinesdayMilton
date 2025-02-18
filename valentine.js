@@ -47,3 +47,8 @@ if (noBtn) {
 
 // Start the Countdown
 startCountdown();
+
+ function toggleEnvelope() {
+		console.log("Envelope clicked!");
+		document.querySelector(".envelope-container").classList.toggle("open");
+ }
