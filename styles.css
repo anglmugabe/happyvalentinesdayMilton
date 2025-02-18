@@ -1,6 +1,10 @@
+body {
+    background: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+    width: 100%;
+}
+
 .proposal-card {
     text-align: center;
-    background: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
 }
 
 h1 {
@@ -41,6 +45,7 @@ h1 {
     text-align: center;
     border-radius: 5px;
     border-style: none;
+
 }
 
 .response-message {
@@ -86,5 +91,46 @@ a {
 
     75% {
         transform: translateX(-5px);
+    }
+}
+
+.countdown-heading {
+    font-size: 32px;
+    font-family: "Style Script", serif;
+    margin-bottom: 10px;
+    color: #da137d;
+    text-align: center;
+}
+
+.countdown {
+    font-size: 72px;
+    font-weight: 700;
+    color: #C60726;
+    text-align: center;
+    background: #ffe5ec;
+    padding: 20px;
+    border-radius: 10px;
+    width: fit-content;
+    margin: 20px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.countdown.celebrate {
+    color: #ffcc00;
+    animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
     }
 }
